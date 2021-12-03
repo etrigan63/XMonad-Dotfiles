@@ -10,4 +10,4 @@ This module is currenly configured for two identical monitors next to each other
 ![Screenshot](/assets/2021-11-15_12-01.png)
 
 ## Video ##
-![Demo video](/assets/xmonad.webm)
+![Demo video](/assets/xmonad.mp4)
