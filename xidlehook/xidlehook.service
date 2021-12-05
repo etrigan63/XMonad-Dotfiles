@@ -3,14 +3,9 @@ Description=Automatic Screen Locker
 
 [Service]
 Type=simple
-StandardOutput=journal
 Environment=DISPLAY=:0
 Environment=XIDLEHOOK_SOCK=/tmp/xidlehook.socket
-#ExecStart=/usr/bin/xidlehook --socket $XIDLEHOOK_SOCK --timer 300 '/usr/bin/betterlockscreen -l dimblur --display 1 --span' ''
-ExecStart=/usr/bin/xidlehook --socket $XIDLEHOOK_SOCK --timer 600 'xsecurelock' ''
-Restart=on-failure
-RestartSec=30s
+ExecStart=xidlehook --socket $XIDLEHOOK_SOCK --timer 600 'xsecurelock' ''
 
 [Install]
-WantedBy=multi-user.target
-
+WantedBy=graphical.target
